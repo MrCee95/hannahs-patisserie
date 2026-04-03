@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah's Patisserie | Sweet Treats, Serious Skills</title>
+    <meta name="description" content="Artisan ice cream & pastries in Kasoa, Ghana. A training kitchen empowering the next generation of pastry chefs.">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- JSON-LD Structured Data for Local Business SEO [[21]][[28]] -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Hannah's Patisserie",
+      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80",
+      "@id": "https://hannahspatisserie.gh",
+      "url": "https://hannahspatisserie.gh",
+      "telephone": "+233547572955",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kasoa Second",
+        "addressLocality": "Kasoa",
+        "addressRegion": "Central Region",
+        "postalCode": "",
+        "addressCountry": "GH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 5.53449,
+        "longitude": -0.41679
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "12:00",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "GHS",
+      "servesCuisine": ["Pastry", "Ice Cream", "Desserts"],
+      "description": "Artisan ice cream & pastries crafted by apprentices under Master Pastry Chefs. A dedicated training kitchen in Kasoa, Ghana."
+    }
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDF5',
+                        rose: '#DCAE96',
+                        roseDark: '#C8967B',
+                        charcoal: '#333333',
+                    },
+                    fontFamily: {
+                        heading: ['DynaPuff', 'cursive'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth scroll offset for fixed header */
+        html { scroll-padding-top: 80px; }
+        /* Focus visible for accessibility */
+        a:focus-visible, button:focus-visible { 
+            outline: 3px solid #DCAE96; 
+            outline-offset: 2px; 
+        }
+        /* Cookie banner animation */
+        #cookieBanner { transition: transform 0.3s ease; }
+        #cookieBanner.hidden { transform: translateY(100%); }
+    </style>
+</head>
+<body class="bg-cream font-body text-charcoal">
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-roseDark text-white px-4 py-2 rounded z-50">
+        Skip to main content
+    </a>
+
+    <nav class="fixed top-0 w-full bg-cream/90 backdrop-blur-md z-50 shadow-sm" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="font-heading text-2xl text-roseDark font-bold focus:outline-none focus:ring-2 focus:ring-rose rounded">
+                Hannah's Patisserie
+            </a>
+            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide" id="desktop-menu">
+                <a href="#home" class="hover:text-rose transition focus:outline-none focus:text-rose">Home</a>
+                <a href="#menu" class="hover:text-rose transition focus:outline-none focus:text-rose">Menu</a>
+                <a href="#mission" class="hover:text-rose transition focus:outline-none focus:text-rose">Our Mission</a>
+                <a href="#training" class="hover:text-rose transition focus:outline-none focus:text-rose">Training</a>
+                <a href="#contact" class="hover:text-rose transition focus:outline-none focus:text-rose">Contact</a>
+            </div>
+            <button class="md:hidden text-roseDark text-2xl p-2 focus:outline-none focus:ring-2 focus:ring-rose rounded" 
+                    id="mobile-menu-btn" 
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-cream border-t border-rose/20" id="mobile-menu" role="menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#home" class="block py-2 hover:text-rose font-semibold" role="menuitem">Home</a>
+                <a href="#menu" class="block py-2 hover:text-rose font-semibold" role="menuitem">Menu</a>
+                <a href="#mission" class="block py-2 hover:text-rose font-semibold" role="menuitem">Our Mission</a>
+                <a href="#training" class="block py-2 hover:text-rose font-semibold" role="menuitem">Training</a>
+                <a href="#contact" class="block py-2 hover:text-rose font-semibold" role="menuitem">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section id="home" class="relative h-screen flex items-center justify-center text-center px-6 pt-16">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=1920" 
+                     alt="Freshly baked artisan pastries on a wooden table with morning light" 
+                     class="w-full h-full object-cover brightness-[0.6]"
+                     loading="eager"
+                     width="1920" height="1080">
+            </div>
+            <div class="relative z-10 text-white max-w-3xl">
+                <h2 class="font-heading text-5xl md:text-7xl mb-4">Sweet Treats, Serious Skills</h2>
+                <p class="text-xl md:text-2xl mb-8 font-light">Artisan ice cream & pastries, crafted by the next generation.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#visit" class="bg-white text-roseDark hover:bg-cream px-8 py-4 rounded-full text-lg font-bold transition focus:outline-none focus:ring-2 focus:ring-white">
+                        <i class="fas fa-store mr-2" aria-hidden="true"></i> Visit Our Café
+                    </a>
+                    <a href="#takeout" class="bg-rose hover:bg-roseDark text-white px-8 py-4 rounded-full text-lg font-bold transition focus:outline-none focus:ring-2 focus:ring-white">
+                        <i class="fas fa-shopping-bag mr-2" aria-hidden="true"></i> Order Take-out
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="py-20 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-4xl text-roseDark mb-4">Our Full Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Every item is handmade daily by our apprentices under the guidance of Master Pastry Chefs.</p>
+            </div>
+
+            <div class="flex justify-center flex-wrap gap-3 mb-12" role="tablist" aria-label="Menu categories">
+                <button class="px-6 py-2 rounded-full bg-rose text-white font-bold" role="tab" aria-selected="true">All</button>
+                <button class="px-6 py-2 rounded-full border border-rose text-rose hover:bg-rose/10 transition" role="tab" aria-selected="false">Pastries</button>
+                <button class="px-6 py-2 rounded-full border border-rose text-rose hover:bg-rose/10 transition" role="tab" aria-selected="false">Scoops</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="flex justify-between items-start border-b border-rose/20 pb-4">
+                    <div>
+                        <h4 class="font-bold text-lg">Vanilla Bean Mille-Feuille</h4>
+                        <p class="text-sm text-gray-500 italic">Flaky puff pastry, organic vanilla cream</p>
+                    </div>
+                    <span class="font-heading text-roseDark" aria-label="Price: 6.50 Ghana Cedis">GHS6.50</span>
+                </article>
+                <article class="flex justify-between items-start border-b border-rose/20 pb-4">
+                    <div>
+                        <h4 class="font-bold text-lg">Wildberry Lavender Scoop</h4>
+                        <p class="text-sm text-gray-500 italic">House-made jam, fresh lavender buds</p>
+                    </div>
+                    <span class="font-heading text-roseDark" aria-label="Price: 4.50 Ghana Cedis">GHS4.50</span>
+                </article>
+                <article class="flex justify-between items-start border-b border-rose/20 pb-4">
+                    <div>
+                        <h4 class="font-bold text-lg">Apprentice Signature Pizza</h4>
+                        <p class="text-sm text-gray-500 italic">Hot honey, pepperoni, fresh basil</p>
+                    </div>
+                    <span class="font-heading text-roseDark" aria-label="Price: 14.00 Ghana Cedis">GHS14.00</span>
+                </article>
+            </div>
+        </section>
+        
+        <section id="service-options" class="py-16 bg-cream border-t border-rose/10 px-6">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+                
+                <div id="visit" class="bg-white p-10 rounded-3xl shadow-sm border border-rose/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-rose/10 rounded-full flex items-center justify-center text-rose mr-4" aria-hidden="true">
+                            <i class="fas fa-coffee text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-3xl text-roseDark">The Walk-In Experience</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Join us in our sun-drenched training kitchen. Watch our apprentices at work while you enjoy your treats at our communal wooden tables.</p>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i> See our daily "Apprentice Specials"</li>
+                        <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i> Indoor & Outdoor Seating</li>
+                    </ul>
+                </div>
+
+                <div id="takeout" class="bg-roseDark p-10 rounded-3xl shadow-lg text-white">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white mr-4" aria-hidden="true">
+                            <i class="fas fa-bolt text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-3xl">Quick Take-Out</h3>
+                    </div>
+                    <p class="opacity-90 mb-6">In a rush? Grab your favorites at our dedicated express window. All packaging is 100% compostable.</p>
+                    
+                    <div class="bg-white/10 p-4 rounded-xl mb-8">
+                        <p class="text-xs uppercase tracking-widest font-bold mb-2">Current Wait Time</p>
+                        <p class="text-2xl font-heading">~ 8 Minutes</p>
+                    </div>
+                    
+                    <button onclick="console.log('Opening Take-out Menu...')" class="w-full bg-white text-roseDark py-4 rounded-xl font-bold hover:bg-cream transition focus:outline-none focus:ring-2 focus:ring-white">
+                        Browse Take-out Menu
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="mission" class="bg-white py-20 px-6">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800" 
+                         alt="Master pastry chef mentoring a young apprentice in a bright kitchen" 
+                         class="w-full h-full object-cover"
+                         loading="lazy"
+                         width="800" height="600">
+                </div>
+                <div>
+                    <h2 class="font-heading text-4xl mb-6 text-roseDark">More Than Just Desserts</h2>
+                    <p class="text-lg leading-relaxed mb-8">
+                        Hannah's Patisserie is a dedicated training kitchen where passion meets purpose. We provide a supportive environment for young people to gain hands-on experience in the culinary world, turning a love for baking into a professional career path. Our mission is to empower the next generation with the confidence and skills they need to thrive in the hospitality industry.
+                    </p>
+                    <button onclick="console.log('Supporting mission...')" class="border-2 border-rose text-rose hover:bg-rose hover:text-white px-8 py-3 rounded-full font-bold transition focus:outline-none focus:ring-2 focus:ring-rose">
+                        Support Our Mission
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="training" class="py-20 bg-rose/10 px-6">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="font-heading text-4xl mb-12 text-roseDark">Learn with Us</h2>
+                <div class="grid sm:grid-cols-2 gap-6 text-left mb-12">
+                    <div class="bg-white p-6 rounded-lg flex items-start space-x-4">
+                        <i class="fas fa-shield-virus text-rose mt-1" aria-hidden="true"></i>
+                        <div>
+                            <h4 class="font-bold">Food Safety Certification</h4>
+                            <p class="text-sm text-gray-600">Mastering the fundamentals of kitchen hygiene and safety standards.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg flex items-start space-x-4">
+                        <i class="fas fa-mortar-pestle text-rose mt-1" aria-hidden="true"></i>
+                        <div>
+                            <h4 class="font-bold">Artisan Baking Techniques</h4>
+                            <p class="text-sm text-gray-600">From sourdough fermentation to intricate pastry laminations.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg flex items-start space-x-4">
+                        <i class="fas fa-smile text-rose mt-1" aria-hidden="true"></i>
+                        <div>
+                            <h4 class="font-bold">Customer Service</h4>
+                            <p class="text-sm text-gray-600">Learning the art of hospitality and connecting with our community.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg flex items-start space-x-4">
+                        <i class="fas fa-chart-line text-rose mt-1" aria-hidden="true"></i>
+                        <div>
+                            <h4 class="font-bold">Business Skills</h4>
+                            <p class="text-sm text-gray-600">Understanding inventory, costing, and the daily operations of a shop.</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="alert('Application Form Coming Soon!')" class="bg-roseDark text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-rose transition focus:outline-none focus:ring-2 focus:ring-roseDark">
+                    Apply for Training
+                </button>
+            </div>
+        </section>
+
+        <section id="graduates" class="py-20 bg-white px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-4xl text-roseDark">Our Rising Stars</h2>
+                    <p class="text-gray-600 mt-4">See where our graduates have taken their skills.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <article class="group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
+                            <img src="https://images.unsplash.com/photo-1595273670150-db0a3d39074f?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Smiling graduate holding a tray of pastries" 
+                                 class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500"
+                                 loading="lazy"
+                                 width="400" height="400">
+                        </div>
+                        <h4 class="font-bold text-xl">Graduate 1</h4>
+                        <p class="text-rose font-semibold text-sm mb-2">Class of '24</p>
+                        <p class="text-gray-600 text-sm">"Hannah's gave me the confidence to open my own pop-up doughnut shop last summer!"</p>
+                    </article>
+                    
+                    <article class="group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
+                            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Graduate working in a professional hotel kitchen" 
+                                 class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500"
+                                 loading="lazy"
+                                 width="400" height="400">
+                        </div>
+                        <h4 class="font-bold text-xl">Graduate 2</h4>
+                        <p class="text-rose font-semibold text-sm mb-2">Class of '25</p>
+                        <p class="text-gray-600 text-sm">"Now working as a Junior Pastry Chef at The Grand Hotel. Forever grateful for the mentorship."</p>
+                    </article>
+
+                    <article class="group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-square mb-4">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Graduate reviewing inventory clipboard in bakery" 
+                                 class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500"
+                                 loading="lazy"
+                                 width="400" height="400">
+                        </div>
+                        <h4 class="font-bold text-xl">Graduate 3</h4>
+                        <p class="text-rose font-semibold text-sm mb-2">Class of '25</p>
+                        <p class="text-gray-600 text-sm">"Learned the business side of baking. I'm now the Head of Inventory for a regional bakery chain."</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-12 p-8 bg-white border-2 border-dashed border-rose/50 rounded-2xl text-center max-w-4xl mx-auto">
+            <h3 class="font-heading text-2xl text-roseDark mb-4">Ready to start your career?</h3>
+            <p class="mb-6 text-gray-600">Applications for the 2026 Cohort are now open!</p>
+            <button onclick="openApplicationModal()" class="bg-roseDark text-white px-12 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-lg focus:outline-none focus:ring-2 focus:ring-roseDark">
+                Begin Application <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <section id="contact" class="py-20 bg-white px-6">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+                <div class="bg-cream p-8 rounded-2xl shadow-inner">
+                    <h3 class="font-heading text-3xl mb-6 text-roseDark">Say Hello</h3>
+                    <form id="contactForm" class="space-y-4" novalidate>
+                        <div>
+                            <label for="name" class="block text-sm font-semibold mb-1">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full p-3 rounded-lg border border-rose/30 focus:outline-none focus:ring-2 focus:ring-rose" 
+                                   placeholder="Your Name"
+                                   aria-required="true">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full p-3 rounded-lg border border-rose/30 focus:outline-none focus:ring-2 focus:ring-rose" 
+                                   placeholder="email@example.com"
+                                   aria-required="true">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full p-3 rounded-lg border border-rose/30 focus:outline-none focus:ring-2 focus:ring-rose" 
+                                      placeholder="How can we help?"
+                                      aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-roseDark text-white font-bold py-3 rounded-lg hover:bg-rose transition shadow-md focus:outline-none focus:ring-2 focus:ring-roseDark">
+                            Send Message
+                        </button>
+                        <p id="form-status" class="text-center text-sm mt-2" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-md">
+                        <!-- Fixed map embed with Kasoa, Ghana coordinates [[1]][[13]] -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=5.53449,-0.41679&zoom=15" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Hannah's Patisserie location in Kasoa, Ghana"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-heading text-xl text-roseDark mb-2 underline decoration-rose/30">Location</h4>
+                            <p class="text-gray-600" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">Kasoa Second</span><br>
+                                <span itemprop="addressLocality">Central Region</span>, 
+                                <span itemprop="addressCountry">Ghana</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-xl text-roseDark mb-2 underline decoration-rose/30">Hours</h4>
+                            <p class="text-gray-600">
+                                <strong>Mon-Sat:</strong> 7am - 6pm<br>
+                                <strong>Sun:</strong> 12pm - 7pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" 
+            class="fixed bottom-6 right-6 bg-roseDark text-white p-3 rounded-full shadow-lg hover:bg-rose transition opacity-0 invisible focus:opacity-100 focus:visible focus:outline-none focus:ring-2 focus:ring-roseDark z-40"
+            aria-label="Back to top"
+            title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-charcoal text-white p-4 md:p-6 z-50 hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm opacity-90">
+                🍪 We use cookies to enhance your experience. By continuing, you agree to our <a href="#" class="underline hover:text-rose">Cookie Policy</a>.
+            </p>
+            <div class="flex gap-3">
+                <button id="cookieAccept" class="bg-rose text-white px-4 py-2 rounded font-semibold hover:bg-roseDark transition text-sm">
+                    Accept
+                </button>
+                <button id="cookieDecline" class="bg-white/10 text-white px-4 py-2 rounded font-semibold hover:bg-white/20 transition text-sm">
+                    Decline
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-charcoal text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="opacity-75">&copy; <time datetime="2024">2024</time> Hannah's Patisserie. All Rights Reserved.</p>
+            <p>
+                <i class="fas fa-phone text-rose mr-3" aria-hidden="true"></i> 
+                <a href="tel:+233547572955" class="hover:text-rose transition">+233 54 757 2955</a> / 
+                <a href="tel:+233201959415" class="hover:text-rose transition">+233 20 195 9415</a>
+            </p>
+            <div class="flex space-x-6 text-2xl" role="navigation" aria-label="Social media">
+                <a href="#" class="hover:text-rose transition focus:outline-none focus:text-rose" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="hover:text-rose transition focus:outline-none focus:text-rose" aria-label="Like us on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Mobile Menu Toggle =====
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        
+        mobileMenuBtn?.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.className = isExpanded ? 'fas fa-bars' : 'fas fa-times';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                menuIcon.className = 'fas fa-bars';
+            });
+        });
+
+        // ===== Back to Top Button =====
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== Cookie Consent Banner =====
+        const cookieBanner = document.getElementById('cookieBanner');
+        const cookieAccept = document.getElementById('cookieAccept');
+        const cookieDecline = document.getElementById('cookieDecline');
+        
+        // Show banner if no preference saved
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => {
+                cookieBanner?.classList.remove('hidden');
+            }, 2000);
+        }
+        
+        cookieAccept?.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner?.classList.add('hidden');
+            console.log('Cookies accepted');
+        });
+        
+        cookieDecline?.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieBanner?.classList.add('hidden');
+            console.log('Cookies declined');
+        });
+
+        // ===== Contact Form Handling =====
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('form-status');
+        
+        contactForm?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            // Validate
+            if (!e.target.checkValidity()) {
+                formStatus.textContent = 'Please fill in all required fields.';
+                formStatus.className = 'text-center text-sm mt-2 text-red-600';
+                return;
+            }
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            formStatus.textContent = '';
+            
+            // Simulate API Call
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                btn.classList.replace('bg-roseDark', 'bg-green-600');
+                formStatus.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+                formStatus.className = 'text-center text-sm mt-2 text-green-600 font-medium';
+                e.target.reset();
+                console.log("Inquiry received for Hannah's Patisserie.");
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-roseDark');
+                }, 3000);
+            }, 1500);
+        });
+
+        // ===== Application Modal (Placeholder) =====
+        function openApplicationModal() {
+            console.log("Opening Apprenticeship Application Portal...");
+            alert("🎉 Application Portal is loading!\n\nPlease have ready:\n• Personal statement\n• Availability schedule\n• Any prior culinary experience\n\nThank you for your interest in Hannah's Patisserie!");
+        }
+
+        // ===== Smooth Scroll Logging =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    console.log(`Navigating to: ${href}`);
+                }
+            });
+        });
+
+        // ===== Image Loading Fallback =====
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.alt = 'Image unavailable';
+                this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"%3E%3Crect fill="%23f5f5f5" width="400" height="300"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="16" x="50%25" y="50%25" text-anchor="middle"%3EImage unavailable%3C/text%3E%3C/svg%3E';
+            });
+        });
+    </script>
+</body>
+</html>
