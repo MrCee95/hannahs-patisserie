@@ -6,7 +6,7 @@ export default function About() {
       {/* Mission */}
       <div id="mission" className="grid md:grid-cols-2 gap-12 items-center">
         <img 
-          src="/images/Hero 2.jpg?auto=format&fit=crop&q=80&w=800" 
+          src="/images/Hero2.jpg?auto=format&fit=crop&q=80&w=800" 
           alt="Chef mentoring apprentice" 
           className="rounded-2xl shadow-xl w-full h-80 object-cover"
         />
