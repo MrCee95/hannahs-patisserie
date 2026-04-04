@@ -7,14 +7,14 @@ import Menu from './pages/Menu';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import ThankYou from './pages/ThankYou';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   useEffect(() => {
     initGA();
   }, []);
-
   return (
-    <BrowserRouter basename="/hannahs-patisserie">
+    <BrowserRouter basename="/Hannahs-Patisserie">  
       <AnalyticsTracker />
       <Layout>
         <Routes>

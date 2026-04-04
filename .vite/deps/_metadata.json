@@ -1,70 +1,46 @@
 {
-  "hash": "ee3848d4",
+  "hash": "f214034a",
   "configHash": "3b6255bd",
-  "lockfileHash": "92d2c877",
-  "browserHash": "a9a2dce4",
+  "lockfileHash": "b39b3189",
+  "browserHash": "4a05f547",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "fe33daf1",
+      "fileHash": "bf9dbecd",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "a92a0779",
+      "fileHash": "f6e87407",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "d79dd3b1",
+      "fileHash": "55fd0e37",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "baae6dc0",
+      "fileHash": "979c578b",
       "needsInterop": true
-    },
-    "framer-motion": {
-      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
-      "file": "framer-motion.js",
-      "fileHash": "c44b65d9",
-      "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "82d65a1d",
+      "fileHash": "980b445f",
       "needsInterop": true
-    },
-    "react-ga4": {
-      "src": "../../node_modules/react-ga4/dist/index.js",
-      "file": "react-ga4.js",
-      "fileHash": "959b44b3",
-      "needsInterop": true
-    },
-    "react-router-dom": {
-      "src": "../../node_modules/react-router-dom/dist/index.js",
-      "file": "react-router-dom.js",
-      "fileHash": "55a17b7a",
-      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-IHRST5LR": {
-      "file": "chunk-IHRST5LR.js"
+    "chunk-EZWSRKYN": {
+      "file": "chunk-EZWSRKYN.js"
     },
-    "chunk-LER6W43O": {
-      "file": "chunk-LER6W43O.js"
-    },
-    "chunk-32E4H3EV": {
-      "file": "chunk-32E4H3EV.js"
-    },
-    "chunk-G3PMV62Z": {
-      "file": "chunk-G3PMV62Z.js"
+    "chunk-GFWMZNU4": {
+      "file": "chunk-GFWMZNU4.js"
     }
   }
 }
