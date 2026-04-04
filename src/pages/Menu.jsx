@@ -23,7 +23,7 @@ export default function Menu() {
       </div>
 
       <div className="flex justify-center flex-wrap gap-3 mb-12">
-        {['all', 'pastries', 'scoops', 'savory'].map(cat => (
+        {['all', 'pastries', 'scoops', 'cakes'].map(cat => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}
