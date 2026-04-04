@@ -1,4 +1,5 @@
-import { n as __commonJSMin, t as require_react } from "./react-SZG5ijTs.js";
+import { t as __commonJSMin } from "./chunk-BoAXSpZd.js";
+import { t as require_react } from "./react.js";
 //#region node_modules/react/cjs/react-jsx-runtime.development.js
 /**
 * @license React
@@ -695,5 +696,6 @@ var require_jsx_runtime = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 }));
 //#endregion
 export default require_jsx_runtime();
+export { require_jsx_runtime as t };
 
 //# sourceMappingURL=react_jsx-runtime.js.map

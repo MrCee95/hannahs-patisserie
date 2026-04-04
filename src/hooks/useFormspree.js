@@ -1,12 +1,14 @@
-// src/hooks/useFormspree.js
 import { useState } from 'react';
 
 export function useFormspree(endpoint, onSuccess) {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', phone: '' });
+  const [status, setStatus] = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,19 +24,16 @@ export function useFormspree(endpoint, onSuccess) {
 
       if (res.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-        
-        // ✅ Call success callback (for analytics)
-        if (onSuccess) onSuccess();
-        
-        // Reset status after 3 seconds
+        setFormData({ name: '', email: '', message: '', phone: '' });
+        if (typeof onSuccess === 'function') onSuccess(formData);
         setTimeout(() => setStatus('idle'), 3000);
       } else {
-        throw new Error('Submission failed');
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || 'Submission failed');
       }
     } catch (err) {
       setStatus('error');
-      setErrorMsg(err.message || 'Something went wrong. Try again.');
+      setErrorMsg(err.message || 'Something went wrong. Please try again.');
     }
   };
 

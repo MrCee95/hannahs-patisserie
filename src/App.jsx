@@ -9,7 +9,6 @@ import Contact from './pages/Contact';
 import ThankYou from './pages/ThankYou';
 
 function App() {
-  // Initialize GA on app mount
   useEffect(() => {
     initGA();
   }, []);
@@ -24,15 +23,23 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="*" element={
+            <div className="min-h-[60vh] flex items-center justify-center">
+              <div className="text-center">
+                <h2 className="font-heading text-4xl text-rose-dark mb-4">404</h2>
+                <p className="text-gray-600 mb-6">Page not found</p>
+                <a href="/" className="text-rose hover:underline">Return Home</a>
+              </div>
+            </div>
+          } />
         </Routes>
       </Layout>
     </BrowserRouter>
   );
 }
 
-// Separate component to use hooks
 function AnalyticsTracker() {
-  usePageViews(); // Track page views on route change
+  usePageViews();
   return null;
 }
 

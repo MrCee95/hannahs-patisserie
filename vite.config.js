@@ -1,42 +1,41 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    ViteImageOptimizer({
+      png: { quality: 80, compressionLevel: 9 },
+      jpeg: { quality: 80, progressive: true },
+      webp: { quality: 75, lossless: false },
+      avif: { quality: 70, speed: 4 },
+      includePublic: true,
+      logStats: true,
+      cache: true,
+      cacheLocation: './node_modules/.vite-image-optimizer',
+    }),
+  ],
   
-  // 🔹 GitHub Pages base path (replace with your repo name)
   base: '/hannahs-patisserie/',
-  
-  // 🔹 Force Vite to use project-local cache (fixes EPERM error)
   cacheDir: path.resolve(__dirname, '.vite'),
-  
-  // 🔹 Dev server settings
   server: {
-    port: 5173,
-    strictPort: true,
-    // Optional: open browser automatically
+    port: 3000,
+    strictPort: false,
     open: true,
   },
-  
-  // 🔹 Dependency optimization
-  optimizeDeps: {
-    exclude: ['large-dependency-if-any'] // Add problematic deps here
-  },
-  
-  // 🔹 Build settings for GitHub Pages
   build: {
     outDir: 'dist',
-    sourcemap: true, // Helpful for debugging
+    sourcemap: true,
     rollupOptions: {
       output: {
-        // Ensure proper asset hashing for cache busting
         assetFileNames: (assetInfo) => {
-          const extType = assetInfo.name.split('.').at(1);
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+          const ext = assetInfo.name.split('.').at(1);
+          if (/png|jpe?g|svg|gif|webp|avif/i.test(ext)) {
             return 'assets/images/[name]-[hash][extname]';
           }
-          if (/css/i.test(extType)) {
+          if (/css/i.test(ext)) {
             return 'assets/css/[name]-[hash][extname]';
           }
           return 'assets/[name]-[hash][extname]';
@@ -44,13 +43,13 @@ export default defineConfig({
       },
     },
   },
-  
-  // 🔹 Resolve aliases for cleaner imports
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@components': path.resolve(__dirname, './src/components'),
       '@pages': path.resolve(__dirname, './src/pages'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
+      '@data': path.resolve(__dirname, './src/data'),
     },
   },
-})
+});

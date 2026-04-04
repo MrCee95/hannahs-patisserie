@@ -1,37 +1,65 @@
 {
-  "hash": "32cc5a0d",
-  "configHash": "49bc16da",
-  "lockfileHash": "7c20452f",
-  "browserHash": "b60539a5",
+  "hash": "f2afd32b",
+  "configHash": "a1f9b9fa",
+  "lockfileHash": "fe7eff43",
+  "browserHash": "50ad0e28",
   "optimized": {
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "7ea99b75",
+      "needsInterop": false
+    },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "1f58b600",
+      "fileHash": "eb793af1",
       "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4286a8d8",
+      "needsInterop": true
+    },
+    "react-ga4": {
+      "src": "../../node_modules/react-ga4/dist/index.js",
+      "file": "react-ga4.js",
+      "fileHash": "b2c2eaf6",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "ba71618b",
+      "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "861e03dd",
+      "fileHash": "fddce088",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "9dd963fd",
+      "fileHash": "54dd6b7c",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "fcc214eb",
+      "fileHash": "75e14d12",
       "needsInterop": true
     }
   },
   "chunks": {
-    "react-SZG5ijTs": {
-      "file": "react-SZG5ijTs.js",
+    "chunk-BoAXSpZd": {
+      "file": "chunk-BoAXSpZd.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-DoAJ_auL": {
+      "file": "react-dom-DoAJ_auL.js",
       "isDynamicEntry": false
     }
   }

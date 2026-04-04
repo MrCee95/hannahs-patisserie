@@ -1,0 +1,23 @@
+{
+  "name": "Hannah's Patisserie",
+  "short_name": "Hannah's",
+  "start_url": "/hannahs-patisserie/",
+  "display": "standalone",
+  "background_color": "#FFFDF5",
+  "theme_color": "#DCAE96",
+  "description": "Artisan pastries & ice cream training kitchen in Kasoa, Ghana",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

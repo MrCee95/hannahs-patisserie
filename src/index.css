@@ -2,13 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Offset for fixed navbar */
+  scroll-padding-top: 80px;
 }
 
-/* Focus visible for better accessibility */
+/* Accessible focus states */
 :focus-visible {
   outline: 3px solid #DCAE96;
   outline-offset: 2px;
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Image fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.image-loaded {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Print styles */
+@media print {
+  nav, footer, .no-print { display: none !important; }
+  body { font-size: 12pt; color: #000; background: #fff; }
+  a { text-decoration: none; color: #000; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.9em; }
 }

@@ -4,12 +4,15 @@
   <meta charset="utf-8">
   <title>Hannah's Patisserie</title>
   <script>
-    // Redirect to index.html with original path
+    // Redirect to index.html with original path for React Router
     const path = window.location.pathname;
     const search = window.location.search;
     const hash = window.location.hash;
     window.location.replace('/hannahs-patisserie/' + path + search + hash);
   </script>
 </head>
-<body>Redirecting...</body>
+<body style="margin:0;padding:20px;font-family:sans-serif;text-align:center">
+  <h2>🍪 Loading Hannah's Patisserie...</h2>
+  <p>If you're not redirected, <a href="/hannahs-patisserie/">click here</a>.</p>
+</body>
 </html>
