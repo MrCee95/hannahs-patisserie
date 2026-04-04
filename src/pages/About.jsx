@@ -6,7 +6,7 @@ export default function About() {
       {/* Mission */}
       <div id="mission" className="grid md:grid-cols-2 gap-12 items-center">
         <img 
-          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800" 
+          src="/images/Hero 2.jpg?auto=format&fit=crop&q=80&w=800" 
           alt="Chef mentoring apprentice" 
           className="rounded-2xl shadow-xl w-full h-80 object-cover"
         />
@@ -22,6 +22,11 @@ export default function About() {
       {/* Training */}
       <div id="training" className="bg-rose/10 p-10 rounded-3xl">
         <h2 className="font-heading text-3xl text-rose-dark mb-8 text-center">Learn with Us</h2>
+        <img 
+          src="/images/hannah_patisserie_gh-20260404-0019.jpg?auto=format&fit=crop&q=80&w=800" 
+          alt="Chef mentoring apprentice" 
+          className="rounded-2xl shadow-xl w-full h-80 object-cover"
+        />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { title: 'Food Safety', icon: '🛡️' },
