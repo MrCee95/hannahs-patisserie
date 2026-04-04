@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { trackEvent } from '../../hooks/useAnalytics';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -92,3 +93,16 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+const handleNavClick = (pageName) => {
+  trackEvent('Navigation', 'Click', pageName, 1);
+};
+
+// In JSX:
+<Link 
+  to={link.path} 
+  onClick={() => handleNavClick(link.name)}
+>
+  {link.name}
+</Link>

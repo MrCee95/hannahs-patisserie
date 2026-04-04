@@ -1,4 +1,4 @@
-// src/components/layout/Footer.jsx
+import { trackOutboundLink } from '../../hooks/useAnalytics';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -36,25 +36,40 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex space-x-6 text-2xl" role="navigation" aria-label="Social media">
           <a
-            href="https://instagram.com/hannahs_patisserie_gh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-rose transition focus:outline-none 
-                       focus:ring-2 focus:ring-rose rounded"
-            aria-label="Follow us on Instagram"
-          >
-            <i className="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a
-            href="https://facebook.com/hannahs_patisserie_gh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-rose transition focus:outline-none 
-                       focus:ring-2 focus:ring-rose rounded"
-            aria-label="Like us on Facebook"
-          >
-            <i className="fab fa-facebook" aria-hidden="true"></i>
-          </a>
+  href="https://instagram.com/hannahs_patisserie_gh"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => trackOutboundLink('https://instagram.com/hannahs_patisserie_gh', 'Instagram')}
+>
+  <i className="fab fa-instagram"></i>
+</a>
+
+<a
+  href="https://facebook.com/hannahs_patisserie_gh"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => trackOutboundLink('https://facebook.com/hannahs_patisserie_gh', 'Facebook')}
+>
+  <i className="fab fa-facebook"></i>
+</a>
+
+<a
+  href="https://tiktok.com/@hannahs_patisserie_gh"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => trackOutboundLink('https://tiktok.com/@hannahs_patisserie_gh', 'TikTok')}
+>
+  <i className="fab fa-tiktok"></i>
+</a>
+
+<a
+  href="https://snapchat.com/hannahs_patisserie_gh"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => trackOutboundLink('https://snapchat.com/hannahs_patisserie_gh', 'Snapchat')}
+>
+  <i className="fab fa-snapchat"></i>
+</a>
         </div>
       </div>
     </footer>

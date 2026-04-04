@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { trackEvent } from '../hooks/useAnalytics';
 
 const menuItems = [
   { name: 'Vanilla Bean Mille-Feuille', desc: 'Flaky puff pastry, organic vanilla cream', price: 'GHS6.50', category: 'pastries' },
@@ -49,3 +50,16 @@ export default function Menu() {
     </section>
   );
 }
+
+
+
+// In the menu item component:
+const handleOrderClick = (itemName) => {
+  trackEvent('Menu', 'Order Click', itemName, 1);
+  // order logic here
+};
+
+// In JSX:
+<button onClick={() => handleOrderClick(item.name)}>
+  Order {item.name}
+</button>

@@ -1,6 +1,7 @@
+// src/hooks/useFormspree.js
 import { useState } from 'react';
 
-export function useFormspree(endpoint) {
+export function useFormspree(endpoint, onSuccess) {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
   const [errorMsg, setErrorMsg] = useState('');
@@ -22,7 +23,11 @@ export function useFormspree(endpoint) {
       if (res.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
-        // Optional: redirect after 2s
+        
+        // ✅ Call success callback (for analytics)
+        if (onSuccess) onSuccess();
+        
+        // Reset status after 3 seconds
         setTimeout(() => setStatus('idle'), 3000);
       } else {
         throw new Error('Submission failed');
