@@ -26,9 +26,18 @@ const Footer = () => {
           <a href="https://instagram.com/hannahs_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Follow us on Instagram" onClick={(e) => trackOutboundLink('https://instagram.com/hannahs_patisserie_gh', 'Instagram')}>
             <i className="fab fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="https://facebook.com/hannahspatisseriegh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Like us on Facebook" onClick={(e) => trackOutboundLink('https://facebook.com/hannahspatisseriegh', 'Facebook')}>
+          <a href="https://facebook.com/hannahs_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Like us on Facebook" onClick={(e) => trackOutboundLink('https://facebook.com/hannahs_patisserie_gh', 'Facebook')}>
             <i className="fab fa-facebook" aria-hidden="true"></i>
           </a>
+
+          <a href="https://tiktok.com/hannahs_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Follow us on TikTok" onClick={(e) => trackOutboundLink('https://tiktok.com/hannahs_patisserie_gh', 'TikTok')}>
+            <i className="fab fa-tiktok" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://snapchat.com/hannahs_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Follow us on Snapchat" onClick={(e) => trackOutboundLink('https://snapchat.com/hannahs_patisserie_gh', 'Snapchat')}>
+            <i className="fab fa-snapchat" aria-hidden="true"></i>
+          </a>
+
           <a href="mailto:hello@hannahspatisserie.com" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Email us" onClick={(e) => trackOutboundLink('mailto:hello@hannahspatisserie.com', 'Email')}>
             <i className="fas fa-envelope" aria-hidden="true"></i>
           </a>
