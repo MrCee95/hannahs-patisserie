@@ -1,5 +1,5 @@
 {
-  "name": "hannahs-patisserie",
+  "name": "Hannahs-Patisserie",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -29,3 +29,5 @@
     "vite-plugin-image-optimizer": "^1.1.8"
   }
 }
+
+
