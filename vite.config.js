@@ -18,7 +18,7 @@ export default defineConfig({
     }),
   ],
  
-  base: '/hannahs-patisserie/',
+  base: '/Hannahs-Patisserie/',
   cacheDir: path.resolve(__dirname, '.vite'),
   server: {
     port: 3000,
