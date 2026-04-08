@@ -6,6 +6,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 export default defineConfig({
   plugins: [
     react(),
+    // Image optimization 
     ViteImageOptimizer({
       png: { quality: 80, compressionLevel: 9 },
       jpeg: { quality: 80, progressive: true },
@@ -17,17 +18,20 @@ export default defineConfig({
       cacheLocation: './node_modules/.vite-image-optimizer',
     }),
   ],
- 
-  base: '/Hannahs-Patisserie/',
+  
+  base: '/hannahs-patisserie/',
+  
   cacheDir: path.resolve(__dirname, '.vite'),
+  
   server: {
     port: 3000,
     strictPort: false,
     open: true,
   },
+  
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: true, // Set to false for production if file size is a concern
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
@@ -43,6 +47,7 @@ export default defineConfig({
       },
     },
   },
+  
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -53,4 +58,3 @@ export default defineConfig({
     },
   },
 });
-
