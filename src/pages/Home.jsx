@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <section id="home" className="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden" aria-label="Welcome to Hannah's Patisserie">
         <div className="absolute inset-0 z-0">
-          <OptimizedImage src="/images/hero-bg.jpg" alt="Fresh artisan pastries on a wooden table with morning light" width={1920} height={1080} sizes="100vw" priority={true} className="brightness-[0.55]" />
+          <OptimizedImage src="/images/Cakes_in_Showcase.jpg" alt="Fresh artisan pastries on a wooden table with morning light" width={1920} height={1080} sizes="100vw" priority={true} className="brightness-[0.55]" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-charcoal/30" />
         </div>
         <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="relative z-10 text-white max-w-3xl pt-16">

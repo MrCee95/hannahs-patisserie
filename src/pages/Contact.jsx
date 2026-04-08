@@ -71,7 +71,7 @@ export default function Contact() {
             <p className="text-gray-600 mb-3"><strong>Or message us:</strong></p>
             <div className="flex gap-4 text-xl">
               <a href="https://instagram.com/hannahs_patisserie_gh" target="_blank" rel="noopener noreferrer" className="text-rose-dark hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded p-2" aria-label="Follow us on Instagram"><i className="fab fa-instagram" aria-hidden="true"></i></a>
-              <a href="https://facebook.com/hannahspatisseriegh" target="_blank" rel="noopener noreferrer" className="text-rose-dark hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded p-2" aria-label="Like us on Facebook"><i className="fab fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://facebook.com/hannahs_patisserie_gh" target="_blank" rel="noopener noreferrer" className="text-rose-dark hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded p-2" aria-label="Like us on Facebook"><i className="fab fa-facebook" aria-hidden="true"></i></a>
               <a href="mailto:hello@hannahspatisserie.com" className="text-rose-dark hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded p-2" aria-label="Email us"><i className="fas fa-envelope" aria-hidden="true"></i></a>
             </div>
           </div>

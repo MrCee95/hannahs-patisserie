@@ -1,41 +1,39 @@
 import { useState } from 'react';
 
-export function useFormspree(endpoint, onSuccess) {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '', phone: '' });
-  const [status, setStatus] = useState('idle');
-  const [errorMsg, setErrorMsg] = useState('');
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+export function useFormspree(formId) {
+  const [state, setState] = useState({
+    submitting: false,
+    succeeded: false,
+    errors: null
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('submitting');
-    setErrorMsg('');
-
+    setState({ ...state, submitting: true });
+    
     try {
-      const res = await fetch(endpoint, {
+      const form = e.target;
+      const data = new FormData(form);
+      
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formData)
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
-
-      if (res.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '', phone: '' });
-        if (typeof onSuccess === 'function') onSuccess(formData);
-        setTimeout(() => setStatus('idle'), 3000);
+      
+      if (response.ok) {
+        setState({ submitting: false, succeeded: true, errors: null });
+        form.reset();
       } else {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || 'Submission failed');
+        const errorData = await response.json();
+        setState({ submitting: false, succeeded: false, errors: errorData.errors });
       }
-    } catch (err) {
-      setStatus('error');
-      setErrorMsg(err.message || 'Something went wrong. Please try again.');
+    } catch (error) {
+      setState({ submitting: false, succeeded: false, errors: [error.message] });
     }
   };
 
-  return { formData, handleChange, handleSubmit, status, errorMsg };
+  return [state, handleSubmit];
 }
