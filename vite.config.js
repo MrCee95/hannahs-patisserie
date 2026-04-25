@@ -31,7 +31,7 @@ export default defineConfig({
   
   build: {
     outDir: 'dist',
-    sourcemap: true, // Set to false for production if file size is a concern
+    sourcemap: true, 
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
