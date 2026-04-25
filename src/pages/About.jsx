@@ -45,7 +45,7 @@ export default function About() {
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center">
           <button onClick={handleApplyClick} className="bg-rose-dark text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-rose transition focus:outline-none focus:ring-2 focus:ring-rose-dark">Apply for 2026 Cohort</button>
-          <p className="text-sm text-gray-500 mt-3">Applications close December 31, 2025</p>
+          <p className="text-sm text-gray-500 mt-3">Applications close September 30, 2026</p>
         </motion.div>
       </div>
 
