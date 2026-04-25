@@ -26,7 +26,7 @@ const Footer = () => {
           <a href="https://instagram.com/hannah_patisserie_gh/" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Follow us on Instagram" onClick={(e) => trackOutboundLink('https://instagram.com/hannah_patisserie_gh/', 'Instagram')}>
             <i className="fab fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="https://facebook.com/p/hannah_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Like us on Facebook" onClick={(e) => trackOutboundLink('https://facebook.com/p/hannah_patisserie_gh', 'Facebook')}>
+          <a href="https://facebook.com/hannah_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Like us on Facebook" onClick={(e) => trackOutboundLink('https://facebook.com/hannah_patisserie_gh', 'Facebook')}>
             <i className="fab fa-facebook" aria-hidden="true"></i>
           </a>
 
@@ -34,7 +34,7 @@ const Footer = () => {
             <i className="fab fa-tiktok" aria-hidden="true"></i>
           </a>
 
-          <a href="https://snapchat.com/hannah_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Follow us on Snapchat" onClick={(e) => trackOutboundLink('https://snapchat.com/hannah_patisserie_gh', 'Snapchat')}>
+          <a href="https://snapchat.com/add/hannah_patisserie_gh" target="_blank" rel="noopener noreferrer" className="hover:text-rose transition focus:outline-none focus:ring-2 focus:ring-rose rounded" aria-label="Follow us on Snapchat" onClick={(e) => trackOutboundLink('https://snapchat.com/add/hannah_patisserie_gh', 'Snapchat')}>
             <i className="fab fa-snapchat" aria-hidden="true"></i>
           </a>
 
