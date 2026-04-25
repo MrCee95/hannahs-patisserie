@@ -33,7 +33,7 @@ contactForm?.addEventListener('submit', async function(e) {
       formStatus.className = 'text-center text-sm mt-2 text-green-600 font-medium';
       contactForm.reset();
       
-      // Optional: Send to Google Analytics
+      // Send to Google Analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', 'form_submit', {
           'event_category': 'engagement',
